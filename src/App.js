@@ -22,12 +22,9 @@ const App = () => {
     //     const account = await window.ethereum.request({
     //       method: 'eth_requestAccounts',
     //  })
-     console.log("test")
      const networkId = await web3Instance.eth.net.getId();
-     console.log("test")
-     console.log("test")
+
      const deployedNetwork = LendingContract.networks[networkId];
-     console.log("test")
      const lendingContractInstance = new web3Instance.eth.Contract(LendingContract.abi, deployedNetwork && deployedNetwork.address);
      setWeb3(web3Instance);
      setAccounts(accounts);
